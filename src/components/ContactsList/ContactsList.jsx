@@ -12,7 +12,6 @@ import { Contact } from 'components/Contact/Contact';
 import { useEffect, useMemo } from 'react';
 import { contactOperations } from 'redux/operations';
 import Filter from 'components/Filter/Filter';
-import { Notify } from 'notiflix';
 
 function ContactsList() {
   const contacts = useSelector(selectContacts);

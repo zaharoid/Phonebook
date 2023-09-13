@@ -6,7 +6,6 @@ import { authOperations } from 'redux/operations';
 import PrivateRoute from 'components/specialRoutes/PrivateRoute';
 import PublicRoute from 'components/specialRoutes/PublicRoute';
 import { selectors } from 'redux/selectors';
-import { Oval } from 'react-loader-spinner';
 
 const Home = lazy(() => import('pages/Home'));
 const Contacts = lazy(() => import('pages/Contacts'));
