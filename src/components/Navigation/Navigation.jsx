@@ -1,8 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { Nav, NavList } from './Navigation.styled';
-import { useSelector } from 'react-redux';
-import { selectors } from 'redux/selectors';
 
 export const Link = styled(NavLink)`
   display: block;
