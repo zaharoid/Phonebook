@@ -23,12 +23,15 @@ const LoginForm = () => {
   const dispatch = useDispatch();
 
   const onSubmit = async (data, e) => {
-    const { meta } = await dispatch(authOperations.login(data));
-    if (meta.rejectedWithValue) {
-      Notify.failure('Something went wrong, check your e-mail and password.');
+    const res = await dispatch(authOperations.login(data));
+    if (res.meta.rejectedWithValue) {
+      Notify.failure(
+        `We could not find such a user, please check the entered data`
+      );
       return;
     }
-    Notify.success('You have successfully logged in :)');
+    console.log(res);
+    Notify.success(`We welcome you, ${res.payload.user.name} )`);
     e.target.reset();
   };
 

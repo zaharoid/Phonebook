@@ -17,8 +17,14 @@ export const FormTitle1 = styled(Title1)`
 `;
 
 export const FormContainer = styled(FormWrapper)`
-  width: 350px;
-  margin-top: 25px;
+  @media only screen and (min-width: 320px) {
+    width: 270px;
+    margin-top: 10px;
+  }
+  @media only screen and (min-width: 768px) {
+    width: 350px;
+    margin-top: 25px;
+  }
 `;
 
 export const FormLabel = styled(Label)`
@@ -26,7 +32,10 @@ export const FormLabel = styled(Label)`
   gap: 0;
 `;
 export const Container = styled.div`
-  margin-top: 70px;
+  margin-top: 30px;
+  @media only screen and (min-width: 768px) {
+    margin-top: 70px;
+  }
 `;
 export const Span = styled.span`
   display: block;

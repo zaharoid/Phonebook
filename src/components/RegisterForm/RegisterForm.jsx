@@ -28,7 +28,9 @@ export default function RegisterForm() {
       const { meta } = await dispatch(authOperations.registration(data));
 
       if (meta.rejectedWithValue) {
-        Notify.failure('Your email is not in the correct format.');
+        Notify.failure(
+          'Something went wrong, check the data entered and try again. )'
+        );
         return;
       }
       Notify.success('Form successfully submitted :)');

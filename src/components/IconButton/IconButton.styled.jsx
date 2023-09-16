@@ -3,20 +3,17 @@ import styled from '@emotion/styled';
 export const AddButton = styled.button`
   display: flex;
   position: absolute;
-  bottom: 50px;
-  right: 50px;
+  top: 100px;
+  right: 30px;
   align-items: center;
   justify-content: center;
-  width: 57px;
-  height: 57px;
+  width: 35px;
+  height: 35px;
 
   border: solid 1px #6fe149;
   background-color: #99f674;
   border-radius: 50%;
   cursor: pointer;
-
-  margin-left: auto;
-  margin-right: auto;
 
   transition: all 250ms linear;
   &:hover {
@@ -28,6 +25,15 @@ export const AddButton = styled.button`
   }
   &:focus {
     background-color: #6fe149;
+  }
+
+  @media only screen and (min-width: 768px) {
+    position: absolute;
+    top: auto;
+    bottom: 50px;
+    right: 50px;
+    width: 57px;
+    height: 57px;
   }
 `;
 

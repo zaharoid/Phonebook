@@ -20,7 +20,6 @@ export const registration = createAsyncThunk(
       token.set(data.token);
       return data;
     } catch (error) {
-      console.log(ApiThunk.rejectWithValue(error.message));
       return ApiThunk.rejectWithValue(error.message);
     }
   }

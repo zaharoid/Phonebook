@@ -7,39 +7,46 @@ import { selectors } from 'redux/selectors';
 export const Link = styled(NavLink)`
   display: block;
 
-  padding: 6px 18px;
-
-  background-color: #bfbfbf;
   text-decoration: none;
   line-height: normal;
-  border-radius: 8px;
-  height: 25px;
+
   color: #111;
   transition: all 250ms linear;
 
-  &:hover {
-    background-color: #ebeaea;
+  &.active {
+    color: var(--milk-white);
   }
 
-  &.active {
-    background-color: #123da1;
-    color: #fffdd0;
+  @media only screen and (min-width: 768px) {
+    padding: 6px 18px;
     height: 25px;
+    border-radius: 8px;
+    background-color: #bfbfbf;
+
+    &.active {
+      height: 25px;
+      background-color: #123da1;
+      &:hover {
+        background-color: #072e89;
+      }
+    }
     &:hover {
-      background-color: #1149cc;
+      background-color: #ebeaea;
+      /* color: #111; */
     }
   }
 `;
 
 const Navigation = () => {
-  const isLoggedIn = useSelector(selectors.selectIsLoggedIn);
   return (
     <Nav>
       <NavList>
         <li>
           <Link to={'/'}>Home</Link>
         </li>
-        <li>{isLoggedIn && <Link to={'/contacts'}>Contacts</Link>}</li>
+        <li>
+          <Link to={'/contacts'}>Contacts</Link>
+        </li>
       </NavList>
     </Nav>
   );

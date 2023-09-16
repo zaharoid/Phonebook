@@ -1,3 +1,4 @@
+import { useDispatch, useSelector } from 'react-redux';
 import {
   List,
   TotalCount,
@@ -6,17 +7,18 @@ import {
   Title2,
   ContactsContainer,
 } from './ContactsList.styled';
-import { selectContacts, selectFilter } from 'redux/selectors/selectors';
-import { useDispatch, useSelector } from 'react-redux';
-import { Contact } from 'components/Contact/Contact';
+import { selectors } from 'redux/selectors';
+import Contact from 'components/Contact';
 import { useEffect, useMemo } from 'react';
 import { contactOperations } from 'redux/operations';
-import Filter from 'components/Filter/Filter';
+import Filter from 'components/Filter';
+import Error from 'components/Error';
 
 function ContactsList() {
-  const contacts = useSelector(selectContacts);
+  const contacts = useSelector(selectors.selectContacts);
   const dispatch = useDispatch();
-  const filterString = useSelector(selectFilter);
+  const filterString = useSelector(selectors.selectFilter);
+  const error = useSelector(selectors.selectError);
 
   const contactsCount = contacts.length;
 
@@ -37,6 +39,7 @@ function ContactsList() {
     <ContactsContainer>
       <Title2>Contacts</Title2>
       <Filter />
+
       <ListContainer>
         <InfoContainer>
           <TotalCount>quantity: {contacts && contactsCount}</TotalCount>
@@ -45,12 +48,16 @@ function ContactsList() {
           )}
         </InfoContainer>
 
-        <List>
-          {contacts &&
-            getFilteredContacts.map(contact => {
-              return <Contact key={contact.id} {...contact} />;
-            })}
-        </List>
+        {error ? (
+          <Error />
+        ) : (
+          <List>
+            {contacts &&
+              getFilteredContacts.map(contact => {
+                return <Contact key={contact.id} {...contact} />;
+              })}
+          </List>
+        )}
       </ListContainer>
     </ContactsContainer>
   );

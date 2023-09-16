@@ -20,11 +20,11 @@ export const Window = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 600px;
+  max-width: 600px;
   height: 350px;
   background-color: #dcdbdb;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-  padding: 15px;
+  padding: 30px;
   border-radius: 15px;
   animation-name: grow-box;
   animation-duration: 250ms;

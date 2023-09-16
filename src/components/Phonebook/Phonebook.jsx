@@ -43,7 +43,10 @@ function Phonebook({ onCloseModal }) {
         return Notify.warning(`${name} is already exist`);
       }
     }
-    await dispatch(contactOperations.addContact({ name, number }));
+    const res = await dispatch(contactOperations.addContact({ name, number }));
+    if (res.meta.rejectedWithValue) {
+      return Notify.warning('Something went wrong, try again later.');
+    }
     Notify.success('Contact was successfully added :)');
     reset();
     onCloseModal();

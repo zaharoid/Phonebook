@@ -2,8 +2,17 @@ import styled from '@emotion/styled';
 
 export const GreetingsContainer = styled.div`
   text-align: center;
-  margin-top: 150px;
+  margin-top: 50px;
   font-size: xx-large;
+  max-width: 768px;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 100%;
+    margin-top: 150px;
+    padding: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 `;
 
 export const GreetingsTitle = styled.h1`
@@ -20,8 +29,6 @@ export const GreetingsText = styled.p`
 `;
 
 export const GreetingsEnd = styled.p`
-  width: 1200px;
-  margin: 0 auto;
   font-weight: 600;
   color: var(--milk-white);
   padding-bottom: 120px;

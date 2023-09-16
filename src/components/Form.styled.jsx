@@ -3,13 +3,19 @@ export const FormWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 275px;
+  width: 220px;
   border: solid 3px #84c7df;
   padding: 15px;
   border-radius: 5px;
 
   margin-left: auto;
   margin-right: auto;
+
+  @media only screen and (min-width: 768px) {
+    gap: 20px;
+    width: 275px;
+    padding: 15px;
+  }
 `;
 
 export const Label = styled.label`

@@ -36,8 +36,12 @@ export const Button = styled.button`
 `;
 
 export const ListContainer = styled.div`
-  width: 980px;
-  margin: 35px auto;
+  width: 100%;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 980px;
+    margin: 35px auto;
+  }
 `;
 
 export const InfoContainer = styled.div`

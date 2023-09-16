@@ -17,7 +17,7 @@ import Modal from 'components/Modal/Modal';
 import { CloseIcon } from 'components/Modal/Modal.styled';
 import { CloseModalBtn } from 'components/Modal/Modal.styled';
 
-export const Contact = ({ id, name, number }) => {
+const Contact = ({ id, name, number }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -90,3 +90,5 @@ export const Contact = ({ id, name, number }) => {
     </>
   );
 };
+
+export default Contact;
