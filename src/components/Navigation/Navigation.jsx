@@ -1,6 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { Nav, NavList } from './Navigation.styled';
+import { useSelector } from 'react-redux';
+import { selectors } from 'redux/selectors';
 
 export const Link = styled(NavLink)`
   display: block;
@@ -30,21 +32,23 @@ export const Link = styled(NavLink)`
     }
     &:hover {
       background-color: #ebeaea;
-      /* color: #111; */
     }
   }
 `;
 
 const Navigation = () => {
+  const isLoggedIn = useSelector(selectors.selectIsLoggedIn);
   return (
     <Nav>
       <NavList>
         <li>
           <Link to={'/'}>Home</Link>
         </li>
-        <li>
-          <Link to={'/contacts'}>Contacts</Link>
-        </li>
+        {isLoggedIn && (
+          <li>
+            <Link to={'/contacts'}>Contacts</Link>
+          </li>
+        )}
       </NavList>
     </Nav>
   );

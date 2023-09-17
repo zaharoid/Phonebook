@@ -30,7 +30,6 @@ const LoginForm = () => {
       );
       return;
     }
-    console.log(res);
     Notify.success(`We welcome you, ${res.payload.user.name} )`);
     e.target.reset();
   };

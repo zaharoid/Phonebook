@@ -17,7 +17,6 @@ function App() {
   const isRefreshing = useSelector(selectors.selectIsRefreshing);
 
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(authOperations.refreshUser());
   }, [dispatch]);
