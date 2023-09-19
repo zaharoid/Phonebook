@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import IconButton from './IconButton';
 
-export const AddButton = styled.button`
+export const AddButton = styled(IconButton)`
   display: flex;
   position: absolute;
   top: 100px;
@@ -37,7 +38,7 @@ export const AddButton = styled.button`
   }
 `;
 
-export const DeleteButton = styled.button`
+export const DeleteButton = styled(IconButton)`
   display: flex;
   align-items: center;
   width: 35px;
@@ -61,7 +62,7 @@ export const DeleteButton = styled.button`
   }
 `;
 
-export const EditButton = styled.button`
+export const EditButton = styled(IconButton)`
   display: flex;
   align-items: center;
   width: 35px;

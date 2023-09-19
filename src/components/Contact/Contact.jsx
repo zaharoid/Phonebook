@@ -65,13 +65,13 @@ const Contact = ({ id, name, number }) => {
         )}
         <ButtonContainer>
           <DeleteButton
-            type="button"
             disabled={loading}
             onClick={onDeleteContact}
+            aria-label="delete contact"
           >
             <DeleteIcon fill="#991a1c"></DeleteIcon>
           </DeleteButton>
-          <EditButton onClick={onStartRewriting}>
+          <EditButton onClick={onStartRewriting} aria-label="edit contact">
             <EditIcon />
           </EditButton>
         </ButtonContainer>
@@ -82,7 +82,7 @@ const Contact = ({ id, name, number }) => {
             contactData={{ name, number, id }}
             onClose={onCloseModal}
           />
-          <CloseModalBtn type="button" onClick={onCloseModal}>
+          <CloseModalBtn onClick={onCloseModal} aria-label="close modal">
             <CloseIcon />
           </CloseModalBtn>
         </Modal>

@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { ReactComponent as CloseIcn } from '../../icons/close.svg';
+import IconButton from 'components/IconButton';
 
 export const CloseIcon = styled(CloseIcn)`
   width: 12px;
@@ -53,7 +54,7 @@ export const ModalTitle = styled.h2`
   font-family: 'Montserrat', sans-serif;
 `;
 
-export const CloseModalBtn = styled.button`
+export const CloseModalBtn = styled(IconButton)`
   position: absolute;
   display: flex;
   width: 25px;
