@@ -2,7 +2,7 @@ import { Notify } from 'notiflix';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Oval } from 'react-loader-spinner';
-// import { ReactComponent as DeleteIcon } from 'icons/delete.svg';
+import { ReactComponent as DeleteIcon } from 'icons/delete.svg';
 import { ReactComponent as EditIcon } from 'icons/edit.svg';
 import { Item, ContactInfo } from './Contact.styled';
 import {
@@ -16,7 +16,7 @@ import RewriteContact from 'components/RewriteContact';
 import Modal from 'components/Modal/Modal';
 import { CloseIcon } from 'components/Modal/Modal.styled';
 import { CloseModalBtn } from 'components/Modal/Modal.styled';
-import { DeleteIcon } from 'components/DeleteIcon/DeleteIcon';
+// import { DeleteIcon } from 'components/DeleteIcon/DeleteIcon';
 
 const Contact = ({ id, name, number }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -70,7 +70,7 @@ const Contact = ({ id, name, number }) => {
             onClick={onDeleteContact}
             aria-label="delete contact"
           >
-            <DeleteIcon fill="#991a1c"></DeleteIcon>
+            <DeleteIcon fill="#991a1c" width="22" height="22"></DeleteIcon>
           </DeleteButton>
           <EditButton onClick={onStartRewriting} aria-label="edit contact">
             <EditIcon />
