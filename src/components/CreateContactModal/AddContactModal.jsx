@@ -3,8 +3,7 @@ import Phonebook from 'components/Phonebook';
 import Modal from 'components/Modal';
 import { CloseIcon } from 'components/Modal/Modal.styled';
 import { ModalTitle, CloseModalBtn } from 'components/Modal/Modal.styled';
-import { ReactComponent as AddIcon } from 'icons/Add.svg';
-import { AddButton } from 'components/IconButton/IconButton.styled';
+import { AddButton, AddIcon } from 'components/IconButton/IconButton.styled';
 
 export const AddContactModal = () => {
   const [showModal, setShowModal] = useState(false);

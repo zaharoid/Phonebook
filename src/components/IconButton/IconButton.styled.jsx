@@ -1,5 +1,11 @@
 import styled from '@emotion/styled';
 import IconButton from './IconButton';
+import { ReactComponent as Add } from 'icons/Add.svg';
+
+export const AddIcon = styled(Add)`
+  width: 32px;
+  height: 32px;
+`;
 
 export const AddButton = styled(IconButton)`
   display: flex;
@@ -15,6 +21,7 @@ export const AddButton = styled(IconButton)`
   background-color: #99f674;
   border-radius: 50%;
   cursor: pointer;
+  padding: 1px;
 
   transition: all 250ms linear;
   &:hover {
@@ -35,6 +42,7 @@ export const AddButton = styled(IconButton)`
     right: 50px;
     width: 57px;
     height: 57px;
+    padding: 6px;
   }
 `;
 
