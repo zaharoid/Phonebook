@@ -21,7 +21,7 @@ export const AddButton = styled(IconButton)`
   background-color: #99f674;
   border-radius: 50%;
   cursor: pointer;
-  padding: 1px;
+  padding: 5px;
 
   transition: all 250ms linear;
   &:hover {
@@ -49,8 +49,10 @@ export const AddButton = styled(IconButton)`
 export const DeleteButton = styled(IconButton)`
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 35px;
   height: 35px;
+  padding: 0;
 
   border-radius: 50%;
   cursor: pointer;
@@ -67,6 +69,9 @@ export const DeleteButton = styled(IconButton)`
   &:disabled {
     background-color: #959494;
     border: 1px solid transparent;
+  }
+  @media only screen and (min-width: 768px) {
+    padding: 6px;
   }
 `;
 

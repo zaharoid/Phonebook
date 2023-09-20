@@ -14,9 +14,7 @@ import { contactOperations } from 'redux/operations';
 import { selectError } from 'redux/selectors/selectors';
 import RewriteContact from 'components/RewriteContact';
 import Modal from 'components/Modal/Modal';
-import { CloseIcon } from 'components/Modal/Modal.styled';
-import { CloseModalBtn } from 'components/Modal/Modal.styled';
-// import { DeleteIcon } from 'components/DeleteIcon/DeleteIcon';
+import { CloseModalBtn, CloseIcon } from 'components/Modal/Modal.styled';
 
 const Contact = ({ id, name, number }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -73,7 +71,7 @@ const Contact = ({ id, name, number }) => {
             <DeleteIcon fill="#991a1c" width="22" height="22"></DeleteIcon>
           </DeleteButton>
           <EditButton onClick={onStartRewriting} aria-label="edit contact">
-            <EditIcon />
+            <EditIcon width="22" height="22" />
           </EditButton>
         </ButtonContainer>
       </Item>

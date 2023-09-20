@@ -3,8 +3,8 @@ import { ReactComponent as CloseIcn } from '../../icons/close.svg';
 import IconButton from 'components/IconButton';
 
 export const CloseIcon = styled(CloseIcn)`
-  width: 12px;
-  height: 12px;
+  width: 11px;
+  height: 11px;
   transition: all 250ms linear;
 `;
 
@@ -68,6 +68,7 @@ export const CloseModalBtn = styled(IconButton)`
   background-color: #dcdbdb;
   transition: all 250ms linear;
   cursor: pointer;
+  padding: 0;
 
   &:hover {
     border-color: transparent;
