@@ -80,6 +80,7 @@ export const EditButton = styled(IconButton)`
   align-items: center;
   width: 35px;
   height: 35px;
+  padding: 0;
 
   border-radius: 50%;
   cursor: pointer;
@@ -92,6 +93,9 @@ export const EditButton = styled(IconButton)`
   }
   &:hover {
     border: 1px solid #20aee3;
+  }
+  @media only screen and (min-width: 768px) {
+    padding: 6px;
   }
 `;
 
